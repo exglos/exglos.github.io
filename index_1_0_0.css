@@ -1,0 +1,72 @@
+/* #EE0055 */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+div, input, button {
+    font-family: monospace, sans-serif;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+#top {
+    background: #EE0055;
+    min-height: 264px;
+}
+#logo {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 200px;
+    height: 200px;
+    background: url(logo.svg);
+}
+h1 {
+    margin: 35px 0px 48px 256px;
+    min-height: 98px;
+    font-size: 40px;
+    font-weight: normal;
+}
+h2 {
+    margin: 35px 0px 48px 256px;
+    font-size: 30px;
+    font-weight: 100;
+}
+#main {
+    margin: 32px auto;
+    width: 90%;
+    max-width: 800px;
+}
+a {
+    color: black;
+    outline: 0;
+}
+a:focus {
+    color: #EE0055;
+}
+#bottom {
+    min-height: 50vh;
+    padding-top: 32px;
+    background: #EE0055;
+    text-align: center;
+}
+#bottom div {
+    display: inline;
+    margin: 8px;
+}
+
+@media (hover: hover) {
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 560px) {
+    label {
+        float: left;
+        width: 50%;
+    }
+}
+@media (min-width: 600px) {
+}
