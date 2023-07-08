@@ -32,7 +32,9 @@
             animation.balls = [];
         };
         setInterval(function () {
-            animation.balls.push(new ball());
+            if (animation.balls.length < 100) {
+                animation.balls.push(new ball());
+            }
         }, 20000);
 
         requestAnimationFrame(stepAnimation);
