@@ -46,6 +46,9 @@ a {
     font-weight: 100;
 }
 
+#main a:focus {
+    color: #EE0055;
+}
 .main {
     margin: 32px auto;
     width: 90%;
@@ -103,6 +106,9 @@ a {
 }
 
 @media (hover: hover) {
+    #main a:hover {
+        color: #EE0055;
+    }
     #bottom a:hover {
         text-decoration: underline;
     }
