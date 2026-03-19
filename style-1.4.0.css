@@ -4,11 +4,14 @@
     font-family: main;
     src: url(font.ttf);
 }
-html, body {
-    margin: 0px;
-    padding: 0px;
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
-div, input, button {
+div,
+input,
+button {
     font-family: main, monospace;
     overflow: hidden;
     word-wrap: break-word;
@@ -20,7 +23,7 @@ a {
 
 #top {
     position: relative;
-    background: #EE0055;
+    background: #ee0055;
 }
 #topCanvas {
     position: absolute;
@@ -36,7 +39,7 @@ a {
     height: 280px;
 }
 #top h1 {
-    margin: 0px 32px;
+    margin: 0 32px;
     font-size: 64px;
     font-weight: 100;
 }
@@ -47,7 +50,11 @@ a {
 }
 
 #main a:focus {
-    color: #EE0055;
+    color: #ee0055;
+}
+#mainBuy {
+    font-size: 32px;
+    font-weight: 600;
 }
 .main {
     margin: 32px auto;
@@ -64,9 +71,9 @@ a {
     max-width: 400px;
 }
 #hodlers div div {
-    margin: 0px 8px 16px;
-    border: 1px solid #EE0055;
-    background: #FAFAFA;
+    margin: 0 8px 16px;
+    border: 1px solid #ee0055;
+    background: #fafafa;
 }
 #hodlers h3 {
     margin: 16px;
@@ -84,12 +91,12 @@ a {
     position: relative;
     height: 128px;
     min-height: 38vh;
-    background: #EE0055;
+    background: #ee0055;
     text-align: center;
 }
 #bottom a {
     display: inline-block;
-    margin: 32px 8px 0px;
+    margin: 32px 8px 0;
     padding: 2px;
     text-decoration: none;
 }
@@ -100,14 +107,14 @@ a {
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: #EE0055;
+    color: #ee0055;
     font-size: 16px;
     font-weight: 100;
 }
 
 @media (hover: hover) {
     #main a:hover {
-        color: #EE0055;
+        color: #ee0055;
     }
     #bottom a:hover {
         text-decoration: underline;
@@ -126,7 +133,7 @@ a {
         left: 280px;
     }
     #bottom a {
-        margin: 32px 7vw 0px;
+        margin: 32px 7vw 0;
     }
 }
 @media (min-width: 680px) {
