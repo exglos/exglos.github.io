@@ -2,19 +2,17 @@
 
 @font-face {
     font-family: main;
-    src: url(font.ttf);
+    src: url(./font.ttf);
 }
 html,
 body {
     margin: 0;
     padding: 0;
 }
-div,
-input,
-button {
+div {
     font-family: main, monospace;
     overflow: hidden;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 a {
     color: black;
@@ -43,28 +41,63 @@ a {
     font-size: 64px;
     font-weight: 100;
 }
-#top h2 {
+#top p {
     margin: 12px 32px 32px;
+    font-size: 32px;
+}
+@media (min-width: 600px) {
+    #top h1 {
+        position: absolute;
+        top: 40px;
+        left: 280px;
+    }
+    #top p {
+        position: absolute;
+        top: 200px;
+        left: 280px;
+    }
+}
+
+#main h2 {
+    margin: 32px 8px;
+    text-align: center;
     font-size: 32px;
     font-weight: 100;
 }
-
-#main a:focus {
+#mainTop {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1000px) {
+    #mainTop {
+        flex-direction: row;
+        margin: 64px 0;
+    }
+}
+#mainTop p {
+    flex: 1 1 auto;
+    margin: 16px 8px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
     color: #ee0055;
 }
 #mainBuy {
     font-size: 32px;
     font-weight: 600;
 }
+#main a:focus {
+    color: #ee0055;
+}
+@media (hover: hover) {
+    #main a:hover {
+        color: #ee0055;
+    }
+}
 .main {
     margin: 32px auto;
     width: 90%;
     max-width: 800px;
-}
-#main h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 100;
 }
 #hodlers {
     margin: auto;
@@ -74,6 +107,27 @@ a {
     margin: 0 8px 16px;
     border: 1px solid #ee0055;
     background: #fafafa;
+}
+@media (min-width: 680px) {
+    #hodlers {
+        max-width: 800px;
+    }
+    #hodlers .hodler {
+        float: left;
+        width: 50%;
+    }
+    #hodlers div div {
+        min-height: 180px;
+    }
+}
+@media (min-width: 1360px) {
+    #hodlers {
+        max-width: 1600px;
+    }
+    #hodlers .hodler {
+        float: left;
+        width: 25%;
+    }
 }
 #hodlers h3 {
     margin: 16px;
@@ -100,60 +154,16 @@ a {
     padding: 2px;
     text-decoration: none;
 }
-#bottom a:focus {
-    text-decoration: underline;
-}
-#bottom h2 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: #ee0055;
-    font-size: 16px;
-    font-weight: 100;
-}
-
-@media (hover: hover) {
-    #main a:hover {
-        color: #ee0055;
-    }
-    #bottom a:hover {
-        text-decoration: underline;
-    }
-}
-
 @media (min-width: 600px) {
-    #top h1 {
-        position: absolute;
-        top: 40px;
-        left: 280px;
-    }
-    #top h2 {
-        position: absolute;
-        top: 200px;
-        left: 280px;
-    }
     #bottom a {
         margin: 32px 7vw 0;
     }
 }
-@media (min-width: 680px) {
-    #hodlers {
-        max-width: 800px;
-    }
-    #hodlers .hodler {
-        float: left;
-        width: 50%;
-    }
-    #hodlers div div {
-        min-height: 180px;
-    }
+#bottom a:focus {
+    text-decoration: underline;
 }
-@media (min-width: 1360px) {
-    #hodlers {
-        max-width: 1600px;
-    }
-    #hodlers .hodler {
-        float: left;
-        width: 25%;
+@media (hover: hover) {
+    #bottom a:hover {
+        text-decoration: underline;
     }
 }
