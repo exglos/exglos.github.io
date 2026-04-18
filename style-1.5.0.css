@@ -52,8 +52,24 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 10px 0 28px;
-    position: relative;
+    padding: 8px 0 22px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg);
+    margin-bottom: 24px;
+}
+
+.topbar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background: var(--line);
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .brand {
@@ -75,7 +91,7 @@ img {
 .topnav {
     display: none;
     gap: 24px;
-    color: var(--muted);
+    color: var(--text);
     font-size: 0.95rem;
 }
 
@@ -164,6 +180,12 @@ img {
 .feature-card a,
 .hodler-card a {
     transition: color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.topnav a,
+.footer a {
+    font-weight: 600;
+    color: #101114;
 }
 
 .button {
@@ -392,7 +414,7 @@ img {
     justify-content: center;
     gap: 24px;
     padding: 48px 0 18px;
-    color: var(--muted);
+    color: var(--text);
     border-top: 1px solid var(--line);
     margin-top: 86px;
     font-size: 0.95rem;
@@ -422,6 +444,10 @@ img {
 @media (min-width: 760px) {
     .topnav-desktop {
         display: flex;
+    }
+
+    .topnav-desktop a {
+        padding: 8px 10px;
     }
 
     .menu-toggle,
