@@ -1,0 +1,19 @@
+<svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1280 1280"
+         preserveAspectRatio="xMidYMid meet"
+         width="32px"
+         height="32px">
+         <circle cx="640" cy="640" r="640" fill="#EE0055" />
+         <path
+                  d="M 328.873 951.127
+             A 1800 1800 0 0 0 951.127 328.873
+             A 440 440 0 1 0 951.127 951.127
+             L 832.929 832.929
+             M 680 680
+             L 532.929 532.929"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="100" />
+         <circle cx="760" cy="380" r="40" fill="black" />
+</svg>
