@@ -114,6 +114,7 @@ img {
     background: #fff;
     color: var(--text);
     cursor: pointer;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
 .menu-toggle span {
@@ -175,6 +176,19 @@ img {
     color: var(--accent);
 }
 
+.topnav a:focus-visible,
+.mobile-menu a:focus-visible,
+.footer a:focus-visible,
+.feature-card h3 a:focus-visible,
+.hodler-card a:focus-visible,
+.address a:focus-visible,
+.button:focus-visible,
+.menu-toggle:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(238, 0, 85, 0.14);
+}
+
 .topnav a,
 .footer a,
 .feature-card a,
@@ -228,6 +242,10 @@ img {
     background: rgba(238, 0, 85, 0.04);
     color: var(--accent);
     box-shadow: 0 10px 22px rgba(16, 17, 20, 0.06);
+}
+
+.hero-actions .button-ghost {
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .topbar-cta {
@@ -299,6 +317,23 @@ img {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 28px;
+}
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.hero-trust span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(16, 17, 20, 0.04);
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .hero-points,
@@ -387,10 +422,11 @@ img {
 }
 
 .feature-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
     align-items: flex-start;
     padding: 24px;
+    gap: 0;
 }
 
 .feature-card h3,
@@ -417,6 +453,10 @@ img {
     justify-content: center;
     border-color: var(--line);
     background: rgba(255, 255, 255, 0.76);
+}
+
+.feature-card p {
+    max-width: 26ch;
 }
 
 .feature-card:hover,
@@ -581,6 +621,12 @@ img {
 
     .feature-card {
         aspect-ratio: 1 / 1;
+        min-height: min(84vw, 320px);
+        padding: 20px;
+    }
+
+    .feature-card p {
+        max-width: none;
     }
 
     .footer {
