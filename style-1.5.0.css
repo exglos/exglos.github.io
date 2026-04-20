@@ -296,9 +296,26 @@ img {
 }
 
 .hero-brand-word {
+    position: relative;
     color: var(--accent);
     display: inline-block;
     animation: brand-pulse 3.6s ease-in-out infinite;
+    isolation: isolate;
+}
+
+.hero-brand-word::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    background: url("./logo.png") center / contain no-repeat;
+    opacity: 0.12;
+    transform: translate(-52%, -54%);
+    filter: saturate(1.1);
+    z-index: -1;
+    animation: brand-mark-drift 6s ease-in-out infinite;
 }
 
 .section-head h2 {
@@ -538,6 +555,18 @@ img {
     50% {
         opacity: 1;
         transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes brand-mark-drift {
+    0%,
+    100% {
+        transform: translate(-52%, -54%) scale(0.96);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translate(-48%, -50%) scale(1.02);
+        opacity: 0.16;
     }
 }
 
