@@ -319,23 +319,6 @@ img {
     margin-top: 28px;
 }
 
-.hero-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 16px;
-}
-
-.hero-trust span {
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(16, 17, 20, 0.04);
-    color: var(--text);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-}
-
 .hero-points,
 .ticker {
     display: flex;
@@ -345,6 +328,15 @@ img {
 
 .hero-points {
     margin-top: 18px;
+}
+
+.hero-points span {
+    padding: 8px 12px;
+    background: rgba(16, 17, 20, 0.04);
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .hero-points span,
