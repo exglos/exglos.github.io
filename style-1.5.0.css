@@ -259,6 +259,10 @@ img {
     padding: 28px 0 16px;
 }
 
+.hero-copy {
+    position: relative;
+}
+
 .hero-copy,
 .hero-visual,
 .feature-card,
@@ -289,6 +293,12 @@ img {
 .hero h1 {
     max-width: 11ch;
     font-size: clamp(2.8rem, 7.2vw, 5.8rem);
+}
+
+.hero-brand-word {
+    color: var(--accent);
+    display: inline-block;
+    animation: brand-pulse 3.6s ease-in-out infinite;
 }
 
 .section-head h2 {
@@ -519,6 +529,18 @@ img {
     }
 }
 
+@keyframes brand-pulse {
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        opacity: 1;
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
 @media (min-width: 760px) {
     .topnav-desktop {
         display: flex;
@@ -609,6 +631,26 @@ img {
 
     .visual {
         max-width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 28px;
+    }
+
+    .hero-actions .button-ghost {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-actions .button-accent {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-points {
+        display: none;
     }
 
     .feature-card {
