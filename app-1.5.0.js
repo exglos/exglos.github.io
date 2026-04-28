@@ -2,9 +2,62 @@
 
 (function () {
     window.addEventListener('load', function () {
+        setupThemeToggle();
         preserveQueryParams();
         setupMobileMenu();
     });
+
+    function setupThemeToggle() {
+        var root = document.documentElement;
+        var toggle = document.getElementById('themeToggle');
+        var metaThemeColor = document.getElementById('themeColorMeta');
+        if (!toggle) {
+            return;
+        }
+
+        function getStoredTheme() {
+            try {
+                return window.localStorage.getItem('exglos-theme');
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function setStoredTheme(theme) {
+            try {
+                window.localStorage.setItem('exglos-theme', theme);
+            } catch (error) {
+                // Ignore storage failures and keep the active theme for this session only.
+            }
+        }
+
+        function resolveTheme() {
+            var storedTheme = getStoredTheme();
+            return storedTheme === 'dark' ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+            var nextTheme = theme === 'dark' ? 'dark' : 'light';
+            var nextAria = nextTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+
+            root.setAttribute('data-theme', nextTheme);
+            toggle.setAttribute('aria-pressed', String(nextTheme === 'dark'));
+            toggle.setAttribute('aria-label', nextAria);
+
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', nextTheme === 'dark' ? '#0b0f15' : '#f7f8fa');
+            }
+        }
+
+        applyTheme(resolveTheme());
+
+        toggle.addEventListener('click', function () {
+            var currentTheme = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+            var nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setStoredTheme(nextTheme);
+            applyTheme(nextTheme);
+        });
+    }
 
     function preserveQueryParams() {
         var query = window.location.search;
