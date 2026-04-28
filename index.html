@@ -7,7 +7,7 @@
         <meta charset="UTF-8" />
         <meta name="description" content="Minimal crypto wallet and swap infrastructure." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#EE0055" />
+        <meta id="themeColorMeta" name="theme-color" content="#f7f8fa" />
 
         <meta property="og:site_name" content="Exglos" />
         <meta property="og:title" content="Exglos wallet" />
@@ -24,6 +24,26 @@
         <meta name="twitter:description" content="Blockchain native. Community networked. Proof of dividends." />
         <meta name="twitter:image" content="https://exglos.com/preview.jpg" />
 
+        <script>
+            (function () {
+                var root = document.documentElement;
+                var savedTheme = null;
+
+                try {
+                    savedTheme = window.localStorage.getItem('exglos-theme');
+                } catch (error) {
+                    savedTheme = null;
+                }
+
+                var theme = savedTheme === 'dark' ? 'dark' : 'light';
+
+                root.setAttribute('data-theme', theme);
+                var themeColorMeta = document.getElementById('themeColorMeta');
+                if (themeColorMeta) {
+                    themeColorMeta.setAttribute('content', theme === 'dark' ? '#0b0f15' : '#f7f8fa');
+                }
+            })();
+        </script>
         <link rel="icon" href="./logo.png" />
         <link rel="stylesheet" href="./style-1.5.0.css" />
     </head>
@@ -52,6 +72,9 @@
                         rel="noreferrer"
                         >Buy EXG</a
                     >
+                    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+                        <span class="theme-toggle-icon" aria-hidden="true"></span>
+                    </button>
                     <button
                         id="menuToggle"
                         class="menu-toggle"
