@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- 2.0.0 -->
+<!-- 2.1.0 -->
 <html lang="en">
     <head>
         <title>Exglos</title>
@@ -25,7 +25,7 @@
         <meta name="twitter:image" content="https://exglos.com/preview.jpg" />
 
         <link rel="icon" href="./logo.png" />
-        <link rel="stylesheet" href="./style-1.5.0.css" />
+        <link rel="stylesheet" href="./style-2.1.0.css" />
     </head>
     <body>
         <div class="page-shell">
@@ -36,7 +36,7 @@
                 </a>
                 <div class="topbar-actions">
                     <nav class="topnav topnav-desktop" aria-label="Primary">
-                        <a href="https://wallet.exglos.com" target="_blank" rel="noreferrer">Wallet</a>
+                        <a data-preserve-query href="https://wallet.exglos.com" target="_blank" rel="noreferrer">Wallet</a>
                         <a href="https://swap.exglos.com" target="_blank" rel="noreferrer">Swap</a>
                         <a href="https://ens.exglos.com" target="_blank" rel="noreferrer">ENS</a>
                         <a href="https://vpn.exglos.com" target="_blank" rel="noreferrer">VPN</a>
@@ -66,7 +66,7 @@
                     </button>
                 </div>
                 <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile primary">
-                    <a href="https://wallet.exglos.com" target="_blank" rel="noreferrer">Wallet</a>
+                    <a data-preserve-query href="https://wallet.exglos.com" target="_blank" rel="noreferrer">Wallet</a>
                     <a href="https://swap.exglos.com" target="_blank" rel="noreferrer">Swap</a>
                     <a href="https://ens.exglos.com" target="_blank" rel="noreferrer">ENS</a>
                     <a href="https://vpn.exglos.com" target="_blank" rel="noreferrer">VPN</a>
@@ -117,7 +117,7 @@
                                 >Chat</a
                             >
                         </div>
-                        <div class="hero-points" aria-label="Key benefits">
+                        <div class="hero-points">
                             <span>Ethereum web wallet</span>
                             <span>Trade any token</span>
                             <span>Vless server for holders</span>
@@ -149,9 +149,9 @@
 
                     <div class="feature-grid">
                         <article class="feature-card" data-reveal>
-                            <h3><a href="https://wallet.exglos.com" target="_blank" rel="noreferrer">Wallet</a></h3>
+                            <h3><a data-preserve-query href="https://wallet.exglos.com" target="_blank" rel="noreferrer">Wallet</a></h3>
                             <p>Ethereum web wallet with no installation or registration, accessible from any device.</p>
-                            <a class="button button-ghost feature-card-cta" href="https://wallet.exglos.com" target="_blank" rel="noreferrer"
+                            <a class="button button-ghost feature-card-cta" data-preserve-query href="https://wallet.exglos.com" target="_blank" rel="noreferrer"
                                 >Open wallet</a
                             >
                         </article>
@@ -182,16 +182,16 @@
                     </div>
                 </section>
 
-                <section class="community" aria-labelledby="hodlers">
+                <section class="community" aria-labelledby="heroes">
                     <div class="section-head" data-reveal>
-                        <p class="eyebrow">hodlers</p>
-                        <h2 id="hodlers">Community proofs, kept readable.</h2>
-                        <p class="supporting">Verified EXG holders, public addresses on the Exglos network.</p>
+                        <p class="eyebrow">heroes</p>
+                        <h2 id="heroes">The community behind Exglos</h2>
+                        <p class="supporting">Public wallets and concise context for the key people and addresses around EXG.</p>
                     </div>
 
                     <div class="hodler-grid">
                         <article class="hodler-card" data-reveal>
-                            <h3>J0 Satoshi, founder, developer</h3>
+                            <h3>J0, founder, developer</h3>
                             <p class="address">
                                 <a
                                     href="https://etherscan.io/address/0xe974e991668cdeaf98e03a2154363a8f20494909"
@@ -200,26 +200,11 @@
                                     >0xE974e991668CDEAF98e03A2154363a8F20494909</a
                                 >
                             </p>
-                            <p><a href="https://jo.exglos.com" target="_blank" rel="noreferrer">jo.exglos.com</a></p>
-                            <p>'I have used only crypto money throughout my entire life.'</p>
+                            <p><a href="https://t.me/J0satoshi" target="_blank" rel="noreferrer">t.me/J0satoshi</a></p>
                         </article>
 
                         <article class="hodler-card" data-reveal>
-                            <h3>7961C6, scientist, coder</h3>
-                            <p class="address">
-                                <a
-                                    href="https://etherscan.io/address/0x7961c6ad766f0306c67b3b2660fe74070ba1abea"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    >0x7961c6AD766F0306C67b3b2660fE74070ba1aBEA</a
-                                >
-                            </p>
-                            <p><a href="http://7961C6.exglos.com" target="_blank" rel="noreferrer">7961C6.exglos.com</a></p>
-                            <p>'Blockchain is one of the greatest inventions of mankind.'</p>
-                        </article>
-
-                        <article class="hodler-card" data-reveal>
-                            <h3>Max, investor, blogger</h3>
+                            <h3>Max, founder</h3>
                             <p class="address">
                                 <a
                                     href="https://etherscan.io/address/0xc5e4045e291ee6a414beb298310ff41b86d53666"
@@ -228,12 +213,46 @@
                                     >0xC5E4045E291EE6a414beb298310fF41b86D53666</a
                                 >
                             </p>
-                            <p><a href="http://max.exglos.com" target="_blank" rel="noreferrer">max.exglos.com</a></p>
-                            <p>'Exglos is my best investment.'</p>
                         </article>
 
                         <article class="hodler-card" data-reveal>
-                            <h3>HC, influencer, auditor</h3>
+                            <h3>x7961C6, investor pool</h3>
+                            <p class="address">
+                                <a
+                                    href="https://etherscan.io/address/0x7961c6ad766f0306c67b3b2660fe74070ba1abea"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    >0x7961c6AD766F0306C67b3b2660fE74070ba1aBEA</a
+                                >
+                            </p>
+                        </article>
+
+                        <article class="hodler-card" data-reveal>
+                            <h3>Alex, investor</h3>
+                            <p class="address">
+                                <a
+                                    href="https://etherscan.io/address/0xfd98cae4f58d2a94b1e8be9dce3860b334610bb9"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    >0xfD98cAE4f58D2A94b1e8bE9DcE3860b334610bb9</a
+                                >
+                            </p>
+                        </article>
+
+                        <article class="hodler-card" data-reveal>
+                            <h3>Naftali, developer</h3>
+                            <p class="address">
+                                <a
+                                    href="https://etherscan.io/address/0xf979a3f1567ef18a5d77e8f4b6f9899cf561d486"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    >0xF979a3F1567eF18A5D77e8F4b6f9899Cf561d486</a
+                                >
+                            </p>
+                        </article>
+
+                        <article class="hodler-card" data-reveal>
+                            <h3>ghost</h3>
                             <p class="address">
                                 <a
                                     href="https://etherscan.io/address/0xe19299e010a3c7870019a9b0e958dd138284a044"
@@ -242,7 +261,6 @@
                                     >0xE19299E010a3c7870019a9B0E958DD138284A044</a
                                 >
                             </p>
-                            <p><a href="http://hc.exglos.com" target="_blank" rel="noreferrer">hc.exglos.com</a></p>
                         </article>
                     </div>
                 </section>
@@ -255,6 +273,6 @@
             </footer>
         </div>
 
-        <script src="app-1.5.0.js"></script>
+        <script src="app-2.1.0.js"></script>
     </body>
 </html>
